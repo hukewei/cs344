@@ -15,10 +15,13 @@
 *.exe
 *.out
 *.app
+# CDT-specific
+.cproject
+.project
 
 # OS X stuff
 .DS_Store
 
 build
 bin
-
+Debug
