@@ -4,8 +4,14 @@
 # <author>  Quan Tran Minh. edit by Johannes Kast, Michael Sarahan </author>
 # <email>   quantm@unist.ac.kr  kast.jo@googlemail.com msarahan@gmail.com</email>
 ############################################################################
+cmake_minimum_required(VERSION 3.0)
+
+find_package(CUDA REQUIRED)
+find_package(OpenCV REQUIRED)
 
 # collect source files
+SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -stdlib=libstdc++" )
+set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS}; -ccbin /usr/bin/clang )
 
 file( GLOB  hdr *.hpp *.h )
 file( GLOB  cu  *.cu)
